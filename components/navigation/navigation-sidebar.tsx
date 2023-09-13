@@ -48,7 +48,7 @@ const NavigationSidebar = async () => {
             },
           }}
         />
-        <span className="text-center">Created by Ioannis @2023</span>
+        <span className="text-center text-sm">Created by Ioannis @2023</span>
       </div>
     </div>
   );

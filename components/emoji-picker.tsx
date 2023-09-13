@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Popover,
   PopoverContent,
@@ -7,6 +5,7 @@ import {
 } from "@/components/ui/popover";
 import { Smile } from "lucide-react";
 import Picker from "@emoji-mart/react";
+
 import data from "@emoji-mart/data";
 import { useTheme } from "next-themes";
 
@@ -15,7 +14,8 @@ interface EmojiPickerProps {
 }
 
 const EmojiPicker = ({ onChange }: EmojiPickerProps) => {
-    const { resolvedTheme } = useTheme()
+  const { resolvedTheme } = useTheme();
+
   return (
     <Popover>
       <PopoverTrigger>
@@ -27,7 +27,7 @@ const EmojiPicker = ({ onChange }: EmojiPickerProps) => {
         className="bg-transparent border-none shadow-none drop-shadow-none mb-16"
       >
         <Picker
-        theme={resolvedTheme}
+          theme={resolvedTheme}
           data={data}
           onEmojiSelect={(emoji: any) => onChange(emoji.native)}
         />
